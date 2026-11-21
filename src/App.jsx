@@ -1,0 +1,411 @@
+import {
+  ArrowDown,
+  ArrowRight,
+  ArrowUpRight,
+  Code2,
+  Sparkles,
+} from 'lucide-react'
+
+import './App.css'
+
+const technologies = [
+  'JavaScript',
+  'Python',
+  'C#',
+  'React',
+  'Node.js',
+  'PostgreSQL',
+  'Git',
+]
+
+const projects = [
+  {
+    number: '01',
+    name: 'Libria',
+    category: 'PLATAFORMA WEB',
+    description:
+      'Plataforma de lectura y escritura donde los usuarios pueden descubrir libros, publicar historias, explorar autores y gestionar su biblioteca personal.',
+    technologies: ['React', 'Node.js', 'Express', 'PostgreSQL', 'Supabase'],
+    className: 'libria-preview',
+    visual: 'libria',
+    link: 'https://github.com/Ana-6/libria/tree/main',
+  },
+  {
+    number: '02',
+    name: 'Mabel Activewear',
+    category: 'ECOMMERCE',
+    description:
+      'Tienda online de ropa deportiva y accesorios con catálogo de productos, carrito de compras, autenticación de usuarios, panel administrativo e integración de pagos.',
+    technologies: ['JavaScript', 'Node.js', 'Express', 'PostgreSQL', 'Cloudinary'],
+    className: 'mabel-preview',
+    visual: 'mabel',
+    link: 'https://github.com/anamilet207-star/mabel',
+  },
+  {
+    number: '03',
+    name: 'AppCenar',
+    category: 'SISTEMA DE DELIVERY',
+    description:
+      'Aplicación web de pedidos que conecta clientes, negocios y repartidores, con gestión de productos, órdenes, perfiles y administración.',
+    technologies: ['JavaScript', 'Node.js', 'Express', 'MongoDB', 'Handlebars'],
+    className: 'libria-preview',
+    visual: 'cenar',
+    link: 'https://github.com/Ana-6/AppCenar/tree/main',
+  },
+  {
+    number: '04',
+    name: 'NexoFEL-RD',
+    category: 'FACTURACIÓN ELECTRÓNICA',
+    description:
+      'Sistema web de facturación electrónica y gestión básica de inventario para pequeñas empresas. Desarrollado en equipo como proyecto académico.',
+    technologies: ['C#', '.NET 8', 'ASP.NET Core MVC', 'SQL Server', 'Entity Framework Core'],
+    className: 'mabel-preview',
+    visual: 'nexo',
+    link: 'https://github.com/ramsesarno-dev/NexoFEL-RD',
+  },
+]
+
+function App() {
+  return (
+    <main>
+      <header className="navbar">
+        <a href="#inicio" className="brand">
+          <span className="brand-symbol">a.</span>
+          <span>anamilet<span className="brand-period">soto</span></span>
+        </a>
+
+        <nav className="nav-links">
+          <a href="#inicio">Inicio</a>
+          <a href="#sobre-mi">Sobre mí</a>
+          <a href="#proyectos">Proyectos</a>
+          <a href="#tecnologias">Tecnologías</a>
+        </nav>
+
+        <a href="#contacto" className="nav-contact">
+          Hablemos <ArrowUpRight size={16} />
+        </a>
+      </header>
+
+      <section className="hero" id="inicio">
+        <div className="hero-content">
+          <div className="availability">
+            <span className="availability-dot"></span>
+            ABIERTA A NUEVAS OPORTUNIDADES
+          </div>
+
+          <p className="hero-intro">Hola, soy Anamilet.</p>
+
+          <h1>
+            Desarrollo
+            <span className="hero-title-accent">ideas</span>
+            <span>en experiencias</span>
+            digitales<span className="hero-period">.</span>
+          </h1>
+
+          <p className="hero-description">
+            Estudiante de término de Desarrollo de Software en ITLA.
+            Me gusta aprender, experimentar y construir soluciones
+            digitales que tengan un propósito.
+          </p>
+
+          <div className="hero-actions">
+            <a href="#proyectos" className="button-primary">
+              Ver mis proyectos <ArrowUpRight size={18} />
+            </a>
+            <a href="#sobre-mi" className="button-text">
+              Un poco sobre mí <ArrowDown size={16} />
+            </a>
+          </div>
+
+          <div className="hero-socials">
+            <a href="https://github.com/Ana-6" target="_blank" rel="noreferrer">
+              GitHub <ArrowUpRight size={14} />
+            </a>
+            <a href="https://www.linkedin.com/in/anamilet-soto-86532a271" target="_blank" rel="noreferrer">
+              LinkedIn <ArrowUpRight size={14} />
+            </a>
+            <a href="mailto:anamiletsoto5@gmail.com">
+              Email <ArrowUpRight size={14} />
+            </a>
+          </div>
+        </div>
+
+        <div className="hero-art">
+          <div className="art-topline">
+            <span>PORTAFOLIO PERSONAL</span>
+            <span>2026 — PRESENTE</span>
+          </div>
+
+          <div className="art-composition">
+            <div className="art-back-shape"></div>
+            <div className="art-main-card">
+              <span className="art-small-label">DESARROLLO DE SOFTWARE</span>
+              <div className="art-monogram">AS<span>.</span></div>
+              <div className="art-card-bottom">
+                <span>CREATIVIDAD</span>
+                <span className="art-cross">✳</span>
+                <span>TECNOLOGÍA</span>
+              </div>
+            </div>
+            <div className="art-side-note">
+              <Sparkles size={18} />
+              <span>Ideas en<br />construcción</span>
+            </div>
+            <div className="art-sticker">
+              <span>KEEP</span>
+              <strong>EXPLORING</strong>
+              <span>AND BUILDING</span>
+            </div>
+            <div className="art-number">01</div>
+          </div>
+
+          <div className="art-bottomline">
+            <span>DISEÑAR · DESARROLLAR · APRENDER</span>
+            <span>REPÚBLICA DOMINICANA</span>
+          </div>
+        </div>
+
+        <div className="hero-scroll">
+          <span className="scroll-line"></span>
+          DESLIZA PARA EXPLORAR
+        </div>
+      </section>
+
+      <section className="intro-band">
+        <div className="intro-band-label">MI ENFOQUE</div>
+        <div className="intro-band-item">
+          <span>01</span>
+          <strong>Construir</strong>
+        </div>
+        <div className="intro-band-item">
+          <span>02</span>
+          <strong>Experimentar</strong>
+        </div>
+        <div className="intro-band-item">
+          <span>03</span>
+          <strong>Seguir aprendiendo</strong>
+        </div>
+      </section>
+
+      <section className="about-section" id="sobre-mi">
+        <div className="about-aside">
+          <span className="section-index">01 / SOBRE MÍ</span>
+          <div className="about-decoration">✳</div>
+          <span className="aside-caption">UN PASO A LA VEZ.</span>
+        </div>
+
+        <div className="about-content">
+          <p className="section-kicker">UN POCO SOBRE MI CAMINO</p>
+          <h2>
+            La tecnología es mi herramienta.
+            <span> La curiosidad, mi punto de partida.</span>
+          </h2>
+          <p className="about-description">
+            Actualmente estoy finalizando mi formación en Desarrollo
+            de Software en el Instituto Tecnológico de las Américas
+            (ITLA). Durante este recorrido he trabajado en proyectos
+            que me han permitido explorar el desarrollo web, las bases
+            de datos y la construcción de aplicaciones.
+          </p>
+          <p className="about-description">
+            Me interesa seguir creciendo profesionalmente, enfrentar
+            nuevos retos y convertir lo que voy aprendiendo en
+            soluciones útiles.
+          </p>
+          <a href="#proyectos" className="inline-link">
+            Conoce mi trabajo <ArrowUpRight size={17} />
+          </a>
+        </div>
+      </section>
+
+      <section className="skills-section" id="tecnologias">
+        <div className="skills-heading">
+          <div>
+            <span className="section-index">02 / HERRAMIENTAS</span>
+            <h2>Con qué me gusta <span>trabajar.</span></h2>
+          </div>
+          <p>
+            Tecnologías y herramientas que he utilizado durante mi
+            formación y en el desarrollo de mis proyectos.
+          </p>
+        </div>
+
+        <div className="skills-layout">
+          <div className="skills-feature">
+            <div className="skills-feature-icon"><Code2 size={25} /></div>
+            <span>01 — DESARROLLO</span>
+            <h3>Del concepto<br />al código.</h3>
+            <p>Explorando distintas formas de construir aplicaciones y experiencias web.</p>
+          </div>
+
+          <div className="skills-list">
+            {technologies.map((technology, index) => (
+              <div className="skill-item" key={technology}>
+                <span className="skill-number">0{index + 1}</span>
+                <span>{technology}</span>
+                <ArrowUpRight size={16} />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="projects-section" id="proyectos">
+        <div className="projects-top">
+          <div>
+            <span className="section-index">03 / PROYECTOS</span>
+            <h2>Trabajo en <span>progreso.</span></h2>
+          </div>
+          <p>
+            Proyectos que representan parte de lo que he aprendido,
+            las ideas que he explorado y los retos que he asumido.
+          </p>
+        </div>
+
+        <div className="projects-list">
+          {projects.map((project) => (
+            <article className="project-item" key={project.number}>
+              <div className={`project-art ${project.className} project-art-${project.visual}`}>
+                <div className="project-art-top">
+                  <span>{project.category}</span>
+                  <span>{project.number} / 04</span>
+                </div>
+
+                {project.visual === 'libria' ? (
+                  <div className="libria-art-content">
+                    <span className="preview-brand">libria<span>.</span></span>
+                    <span className="preview-subtitle">HISTORIAS QUE NOS CONECTAN</span>
+                    <div className="book-shapes">
+                      <div className="book-shape book-one"></div>
+                      <div className="book-shape book-two"></div>
+                      <div className="book-shape book-three"></div>
+                    </div>
+                    <span className="preview-bottom">LEE · ESCRIBE · DESCUBRE</span>
+                  </div>
+                ) : project.visual === 'mabel' ? (
+                  <div className="mabel-art-content">
+                    <span className="mabel-small">MOVE WITH PURPOSE</span>
+                    <span className="mabel-word">MABEL</span>
+                    <span className="mabel-sub">ACTIVEWEAR</span>
+                    <div className="mabel-circle"></div>
+                    <span className="mabel-bottom">YOUR EVERYDAY MOVEMENT</span>
+                  </div>
+                ) : project.visual === 'cenar' ? (
+                  <div className="cenar-art-content">
+                    <div className="cenar-window">
+                      <div className="cenar-header">
+                        <strong>AppCenar<span>.</span></strong>
+                        <span className="cenar-avatar">A</span>
+                      </div>
+                      <div className="cenar-greeting">
+                        <span>DESCUBRE ALGO DELICIOSO</span>
+                        <strong>¿Qué se te antoja hoy?</strong>
+                      </div>
+                      <div className="cenar-categories">
+                        <span>🍔 Hamburguesas</span>
+                        <span>🍕 Pizzas</span>
+                        <span>🥗 Saludable</span>
+                      </div>
+                      <div className="cenar-section-title">NEGOCIOS DESTACADOS</div>
+                      <div className="cenar-product">
+                        <div className="cenar-food">🍔</div>
+                        <div><strong>Classic Burger</strong><small>Hamburguesas · 25 min</small></div>
+                        <b>$12</b>
+                      </div>
+                      <div className="cenar-product">
+                        <div className="cenar-food">🍕</div>
+                        <div><strong>Pizza House</strong><small>Pizza · 30 min</small></div>
+                        <b>$15</b>
+                      </div>
+                    </div>
+                    <span className="cenar-caption">PEDIDOS · NEGOCIOS · DELIVERY</span>
+                  </div>
+                ) : (
+                  <div className="nexo-art-content">
+                    <div className="nexo-window">
+                      <div className="nexo-header">
+                        <div><span className="nexo-logo">N</span><strong>NexoFEL-RD</strong></div>
+                        <span className="nexo-status">● SISTEMA ACTIVO</span>
+                      </div>
+                      <div className="nexo-heading">
+                        <span>PANEL DE CONTROL</span>
+                        <strong>Resumen general</strong>
+                      </div>
+                      <div className="nexo-stats">
+                        <div><span>FACTURAS</span><strong>128</strong><small>Este mes</small></div>
+                        <div><span>INGRESOS</span><strong>RD$ 84k</strong><small>Registrados</small></div>
+                        <div><span>INVENTARIO</span><strong>56</strong><small>Productos</small></div>
+                      </div>
+                      <div className="nexo-table-title">FACTURAS RECIENTES</div>
+                      <div className="nexo-table-row"><span># F-001</span><span>Cliente A</span><b>Pagada</b></div>
+                      <div className="nexo-table-row"><span># F-002</span><span>Cliente B</span><b>Pagada</b></div>
+                      <div className="nexo-table-row"><span># F-003</span><span>Cliente C</span><em>Pendiente</em></div>
+                    </div>
+                    <span className="nexo-caption">FACTURACIÓN · INVENTARIO · GESTIÓN</span>
+                  </div>
+                )}
+              </div>
+
+              <div className="project-info">
+                <div className="project-info-top">
+                  <span>{project.number} — {project.category}</span>
+                  <a href={project.link} target="_blank" rel="noreferrer" aria-label={`Ver ${project.name} en GitHub`}>
+                    <ArrowUpRight size={20} />
+                  </a>
+                </div>
+                <h3>{project.name}</h3>
+                <p>{project.description}</p>
+                <div className="project-tech">
+                  {project.technologies.map((technology) => (
+                    <span key={technology}>{technology}</span>
+                  ))}
+                </div>
+                <a className="project-link" href={project.link} target="_blank" rel="noreferrer">
+                  Explorar código en GitHub <ArrowRight size={16} />
+                </a>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="contact-section" id="contacto">
+        <div className="contact-top">
+          <span className="section-index">04 / CONTACTO</span>
+          <span className="contact-symbol">✳</span>
+        </div>
+        <p>¿TIENES UNA IDEA O UNA OPORTUNIDAD?</p>
+        <h2>
+          Hagamos algo<br />
+          <span>interesante.</span>
+        </h2>
+        <a href="mailto:anamiletsoto5@gmail.com" className="contact-button">
+          Escríbeme <ArrowUpRight size={19} />
+        </a>
+      </section>
+
+      <footer className="footer">
+        <a href="#inicio" className="brand footer-brand">
+          <span className="brand-symbol">a.</span>
+          <span>anamilet<span className="brand-period">soto</span></span>
+        </a>
+
+        <span className="footer-description">Desarrollo de Software · ITLA</span>
+
+        <div className="footer-links">
+          <a href="https://github.com/Ana-6" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/anamilet-soto-86532a271" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="mailto:anamiletsoto5@gmail.com">Email</a>
+        </div>
+
+        <div className="footer-bottom">
+          <span>© 2026 Anamilet Soto Franco</span>
+          <a href="#inicio">VOLVER ARRIBA ↑</a>
+          <span>HECHO CON DEDICACIÓN.</span>
+        </div>
+      </footer>
+    </main>
+  )
+}
+
+export default App
