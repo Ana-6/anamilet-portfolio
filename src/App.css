@@ -2013,3 +2013,47 @@ main {
     font-size: 7px;
   }
 }
+
+/* Capturas reales de los proyectos */
+.project-art {
+  height: 355px;
+  min-height: 0;
+  background: #e9e9e6;
+  overflow: hidden;
+}
+
+.project-screenshot {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.project-art-top {
+  z-index: 2;
+  color: #fff;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.8);
+}
+
+.project-art-top span {
+  padding: 7px 9px;
+  border-radius: 3px;
+  background: rgba(20, 20, 20, 0.58);
+}
+
+@media (max-width: 768px) {
+  .project-art {
+    height: auto;
+    aspect-ratio: 16 / 10;
+    min-height: 0;
+  }
+}
+
+@media (max-width: 420px) {
+  .project-art {
+    aspect-ratio: 4 / 3;
+  }
+}

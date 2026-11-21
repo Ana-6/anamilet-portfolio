@@ -28,6 +28,7 @@ const projects = [
     technologies: ['React', 'Node.js', 'Express', 'PostgreSQL', 'Supabase'],
     className: 'libria-preview',
     visual: 'libria',
+    image: '/images/libria.png',
     link: 'https://github.com/Ana-6/libria/tree/main',
   },
   {
@@ -39,7 +40,8 @@ const projects = [
     technologies: ['JavaScript', 'Node.js', 'Express', 'PostgreSQL', 'Cloudinary'],
     className: 'mabel-preview',
     visual: 'mabel',
-    link: 'https://github.com/anamilet207-star/mabel',
+    image: '/images/mabel.png',
+    link: 'https://github.com/anamilet207-star/mabel-activewear',
   },
   {
     number: '03',
@@ -50,6 +52,7 @@ const projects = [
     technologies: ['JavaScript', 'Node.js', 'Express', 'MongoDB', 'Handlebars'],
     className: 'libria-preview',
     visual: 'cenar',
+    image: '/images/appcenar.png',
     link: 'https://github.com/Ana-6/AppCenar/tree/main',
   },
   {
@@ -61,6 +64,7 @@ const projects = [
     technologies: ['C#', '.NET 8', 'ASP.NET Core MVC', 'SQL Server', 'Entity Framework Core'],
     className: 'mabel-preview',
     visual: 'nexo',
+    image: '/images/nexofel-rd.png',
     link: 'https://github.com/ramsesarno-dev/NexoFEL-RD',
   },
 ]
@@ -271,79 +275,12 @@ function App() {
                   <span>{project.number} / 04</span>
                 </div>
 
-                {project.visual === 'libria' ? (
-                  <div className="libria-art-content">
-                    <span className="preview-brand">libria<span>.</span></span>
-                    <span className="preview-subtitle">HISTORIAS QUE NOS CONECTAN</span>
-                    <div className="book-shapes">
-                      <div className="book-shape book-one"></div>
-                      <div className="book-shape book-two"></div>
-                      <div className="book-shape book-three"></div>
-                    </div>
-                    <span className="preview-bottom">LEE · ESCRIBE · DESCUBRE</span>
-                  </div>
-                ) : project.visual === 'mabel' ? (
-                  <div className="mabel-art-content">
-                    <span className="mabel-small">MOVE WITH PURPOSE</span>
-                    <span className="mabel-word">MABEL</span>
-                    <span className="mabel-sub">ACTIVEWEAR</span>
-                    <div className="mabel-circle"></div>
-                    <span className="mabel-bottom">YOUR EVERYDAY MOVEMENT</span>
-                  </div>
-                ) : project.visual === 'cenar' ? (
-                  <div className="cenar-art-content">
-                    <div className="cenar-window">
-                      <div className="cenar-header">
-                        <strong>AppCenar<span>.</span></strong>
-                        <span className="cenar-avatar">A</span>
-                      </div>
-                      <div className="cenar-greeting">
-                        <span>DESCUBRE ALGO DELICIOSO</span>
-                        <strong>¿Qué se te antoja hoy?</strong>
-                      </div>
-                      <div className="cenar-categories">
-                        <span>🍔 Hamburguesas</span>
-                        <span>🍕 Pizzas</span>
-                        <span>🥗 Saludable</span>
-                      </div>
-                      <div className="cenar-section-title">NEGOCIOS DESTACADOS</div>
-                      <div className="cenar-product">
-                        <div className="cenar-food">🍔</div>
-                        <div><strong>Classic Burger</strong><small>Hamburguesas · 25 min</small></div>
-                        <b>$12</b>
-                      </div>
-                      <div className="cenar-product">
-                        <div className="cenar-food">🍕</div>
-                        <div><strong>Pizza House</strong><small>Pizza · 30 min</small></div>
-                        <b>$15</b>
-                      </div>
-                    </div>
-                    <span className="cenar-caption">PEDIDOS · NEGOCIOS · DELIVERY</span>
-                  </div>
-                ) : (
-                  <div className="nexo-art-content">
-                    <div className="nexo-window">
-                      <div className="nexo-header">
-                        <div><span className="nexo-logo">N</span><strong>NexoFEL-RD</strong></div>
-                        <span className="nexo-status">● SISTEMA ACTIVO</span>
-                      </div>
-                      <div className="nexo-heading">
-                        <span>PANEL DE CONTROL</span>
-                        <strong>Resumen general</strong>
-                      </div>
-                      <div className="nexo-stats">
-                        <div><span>FACTURAS</span><strong>128</strong><small>Este mes</small></div>
-                        <div><span>INGRESOS</span><strong>RD$ 84k</strong><small>Registrados</small></div>
-                        <div><span>INVENTARIO</span><strong>56</strong><small>Productos</small></div>
-                      </div>
-                      <div className="nexo-table-title">FACTURAS RECIENTES</div>
-                      <div className="nexo-table-row"><span># F-001</span><span>Cliente A</span><b>Pagada</b></div>
-                      <div className="nexo-table-row"><span># F-002</span><span>Cliente B</span><b>Pagada</b></div>
-                      <div className="nexo-table-row"><span># F-003</span><span>Cliente C</span><em>Pendiente</em></div>
-                    </div>
-                    <span className="nexo-caption">FACTURACIÓN · INVENTARIO · GESTIÓN</span>
-                  </div>
-                )}
+                <img
+                  className="project-screenshot"
+                  src={project.image}
+                  alt={`Captura de pantalla de ${project.name}`}
+                  loading="lazy"
+                />
               </div>
 
               <div className="project-info">
